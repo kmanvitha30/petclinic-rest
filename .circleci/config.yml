@@ -16,7 +16,7 @@ jobs:
           root: ~/petclinic-rest
           paths:
             - docker
-            - helm-rest
+            - helm-petclinic_rest
 
   docker-build-push:
     docker:
@@ -36,7 +36,7 @@ jobs:
       - persist_to_workspace:
           root: ~/petclinic-rest
           paths:
-            - helm-rest
+            - helm-petclinic_rest
   deploy:
     docker:
       - image: jshimko/kube-tools-aws
@@ -53,8 +53,8 @@ jobs:
       - run:
           name: Deploy into eks
           command: |
-            sed -i -e "s/latest/${CIRCLE_SHA1}/g" values.yaml 
-            helm install petclinic-rest helm-rest
+            sed -i -e "s/latest/${CIRCLE_SHA1}/g" helm-petclinic_rest/values.yaml 
+            helm install petclinic-rest helm-petclinic_rest
            
 workflows:
   mvn & docker build:
