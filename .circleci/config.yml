@@ -40,7 +40,7 @@ jobs:
   deploy:
     docker:
       - image: jshimko/kube-tools-aws
-    working_directory:  ~/petclinic-rest/helm-rest
+    working_directory:  ~/petclinic-rest
     steps:
       - attach_workspace:
           at: ~/petclinic-rest
