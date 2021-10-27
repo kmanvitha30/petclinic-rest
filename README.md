@@ -26,6 +26,7 @@ wget -O helm.tar.gz https://get.helm.sh/helm-v3.5.4-linux-amd64.tar.gz
 tar -zxvf helm.tar.gz
 sudo mv linux-amd64/helm /usr/local/bin/helm
 helm version
+```
 
 ## To Run Locally:
 1. Clone the git repository and make petclinic-rest as the current working directory.
