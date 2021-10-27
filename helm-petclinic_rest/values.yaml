@@ -10,5 +10,5 @@ service:
   port: 9966
 
 configmap:
-  spring_datasource_url: jdbc:postgresql://petclinic.c61anvbt5ndd.us-east-1.rds.amazonaws.com:5432/petclinic
+  spring_datasource_url: jdbc:postgresql://<rds_database_endpoint>:5432/petclinic
 
