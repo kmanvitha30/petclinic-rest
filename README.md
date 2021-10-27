@@ -21,7 +21,6 @@ sudo systemctl enable docker
 docker -v
 
 #helm
-```
 wget -O helm.tar.gz https://get.helm.sh/helm-v3.5.4-linux-amd64.tar.gz
 tar -zxvf helm.tar.gz
 sudo mv linux-amd64/helm /usr/local/bin/helm
